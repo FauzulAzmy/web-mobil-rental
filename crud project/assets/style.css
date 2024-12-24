@@ -1,0 +1,217 @@
+/* Reset beberapa styling default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	user-select: none;
+
+}
+
+/* Menetapkan font dasar untuk seluruh halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Container utama untuk halaman */
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto; /* Memastikan tabel atau konten panjang bisa digeser tanpa scroll keseluruhan halaman */
+}
+
+/* Top buttons container for search and add user */
+.top-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for search form */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #3498db;
+}
+
+.btn-search {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-search:hover {
+    background-color: #2980b9;
+}
+
+/* Button for adding user */
+.btn-add {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #2980b9;
+}
+
+/* Container untuk data pengguna yang lebih putih */
+.table-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabel untuk daftar pengguna */
+.table-container {
+    overflow-x: auto; /* Tambahkan ini untuk tabel panjang */
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Shadow */
+    overflow: hidden; /* Menghindari elemen tabel keluar dari border */
+    table-layout: fixed; /* Membatasi lebar kolom agar tidak meluas */
+}
+
+th, td {
+    padding: 8px; /* Memperpendek padding untuk mengurangi tinggi */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word; /* Membungkus teks panjang */
+    white-space: nowrap; /* Mencegah teks melampaui baris */
+    max-width: 150px; /* Batas maksimal lebar kolom */
+    overflow: hidden; /* Sembunyikan teks melampaui batas */
+    text-overflow: ellipsis; /* Tambahkan "..." pada teks yang dipotong */
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Tombol Edit dan Hapus */
+.btn-edit, .btn-delete {
+    padding: 5px 10px;
+    min-width: 60px; /* Menetapkan lebar minimal tombol */
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Agar tombol tetap berada dalam satu baris */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Tombol Edit */
+.btn-edit {
+    background-color: #2ecc71;
+}
+
+.btn-edit:hover {
+    background-color: #27ae60;
+}
+
+/* Tombol Hapus */
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Responsif: Menyesuaikan ukuran tabel di perangkat kecil */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    th, td {
+        padding: 6px; /* Kurangi padding lebih jauh pada perangkat kecil */
+    }
+}
+
+/* Styling tombol pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+.pagination a.active {
+    background-color: #2ecc71;
+}
+
+.pagination a.btn-prev, .pagination a.btn-next {
+    background-color: #f39c12;
+}
+
+.pagination a.btn-prev:hover, .pagination a.btn-next:hover {
+    background-color: #e67e22;
+}
